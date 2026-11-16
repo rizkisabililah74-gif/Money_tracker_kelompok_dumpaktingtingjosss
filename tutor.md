@@ -10,7 +10,7 @@ Ini adalah software yang harus terinstall
 
 2. Klik tombol 'admin' pada sql dan nanti akan diarahkan ke browser dan membuka localhost
 
-3. Setup database (baca readme.md pada section 1,2,dan 3) untuk membuat Database, paste semua perintah sql di CONSOLE yang ada di pojok bawah menu phpmyadmin (Pastikan nama database sesuai)
+3. Setup database (baca info.md pada section 1,2,dan 3) untuk membuat Database, paste semua perintah sql di CONSOLE yang ada di pojok bawah menu phpmyadmin (Pastikan nama database sesuai)
 
 4. Jika sudah setup , lihat ke folder /service/databases.php , pastikan NAMA DATABASE yang ada di variabel $database sesuai dengan nama yang diberikan pada perintah sql (CREATE DATABASE pelacak_keuangan --- nama DB harus sesuai dan sama.
     CHARACTER SET utf8mb4
