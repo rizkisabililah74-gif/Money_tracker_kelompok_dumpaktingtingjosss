@@ -125,7 +125,6 @@ UPDATE users SET role = 'admin' WHERE email = '??????@??.com'; (Paste di sql, is
 
 
 ### user
-
 #### polosan
 1. email : lebahganteng1234@gmail.com pw :lebahganteng1234
 
