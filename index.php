@@ -14,8 +14,8 @@ $fitur = [
 
 $langkah = [
     ['1', 'Daftar Akun',          'Buat akun dengan email dan kata sandi.'],
-    ['2', 'Atur Akun & Kategori', 'Tambahkan Dompet (Rekening,Cash,E-Wallet).'],
-    ['3', 'Catat Transaksi',      'Isi tanggal, jumlah, dan kategori.'],
+    ['2', 'Catat Transaksi',      'Isi tanggal, jumlah, dan kategori.'],
+    ['3', 'Atur Kategori & Dompet ', 'Kelompokkan berdasarkan kategori'],
     ['4', 'Pantau Laporan',       'Lihat pengeluaran dan pemasukan anda dalam satu dashboard.'],
 ];
 ?>
@@ -42,7 +42,7 @@ $langkah = [
         .sec  { position: relative; overflow: hidden; padding: clamp(64px, 7vw, 96px) 0; }
 
         /* ===== Hero + navbar ===== */
-        .hero { position: relative; overflow: hidden; color: #fff; background: linear-gradient(135deg, #0d2f55, #197ba9); }
+        .hero { position: relative; overflow: hidden; color: #fff; background: linear-gradient(137deg, #0d2f55, #1938a9); }
         .hero .ring, .hero .blob { position: absolute; border-radius: 50%; pointer-events: none; }
         .hero .ring { border: 1px solid rgba(255, 255, 255, .22); }
         .hero .blob { background: rgba(255, 255, 255, .08); }
