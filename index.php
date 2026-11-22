@@ -31,6 +31,7 @@ $langkah = [
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<!-- styling start -->
     <style>
         :root { --poppins: 'Poppins', sans-serif; --inter: 'Inter', sans-serif;
                 --logo: #4169a1; --judul: #1e3a5f; --ink: #1f2937; --muted: #6b7280; --garis: #dce7f3; }
@@ -108,8 +109,9 @@ $langkah = [
         .copy { font: 400 13px var(--inter); color: var(--muted); margin: 0; }
     </style>
 </head>
-<body id="top">
+            <!-- styling end -->
 
+<body id="top">
 <!-- ===== HERO ===== -->
 <header class="hero">
     <span class="ring" style="width:890px;height:890px;right:-150px;top:0"></span>
@@ -145,16 +147,16 @@ $langkah = [
                     <a class="btn btn-garis" href="#fitur">Lihat Fitur &rarr;</a>
                 </div>
             </div>
+            <!-- img dashbboard -->
             <div class="col-lg-5">
-                <!-- Ekspor dari Figma: layer "User (beranda) - Desktop 2" (217:1159) sebagai PNG -->
-                <img class="preview" src="assets/img/dashboard-preview.png" width="543" height="345" alt="Tampilan dashboard Money Tracker">
+                <img class="preview" src="assets/img/User (beranda) - Desktop.png" width="543" height="345" alt="Tampilan dashboard Money Tracker">
             </div>
         </div>
     </div>
 </header>
 
+<!-- ===== TENTANG ===== -->
 <main>
-    <!-- ===== TENTANG ===== -->
     <section id="tentang" class="sec deco">
         <div class="wrap">
             <div class="sec-head mb-0">
@@ -226,8 +228,9 @@ $langkah = [
         Back to Top
     </a>
     <p class="copy">&copy; <?= date('Y') ?> Pelacak Keuangan</p>
-
 </footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

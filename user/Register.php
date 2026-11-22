@@ -39,7 +39,7 @@ if (isset($_POST['daftar'])) {
 }
 ?>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<a href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* ===== Reset ===== */
 *, *::before, *::after { box-sizing: border-box; }
@@ -250,79 +250,6 @@ html, body { margin: 0; padding: 0; overflow: hidden; height: 100%; }
     .reg-card-title { font-size: 24px; }
     .reg-input, .reg-btn { height: 44px; }
 }
-</style>
-
-<div class="reg-page">
-
-    <!-- ══ Brand Panel ══ -->
-    <div class="reg-brand">
-        <a class="brand-logo" href="../index.php">Money Tracker</a>
-
-        <div class="brand-content">
-            <h1 class="brand-title">Mulai Kelola keuangan Anda Sekarang</h1>
-            <p class="brand-tagline">
-                Hanya butuh waktu kurang dari 1 menit.<br>
-                Nikmati berbagai kemudahan dalam mengatur keuangan
-            </p>
-            <div class="stat-cards">
-                <div class="stat-card stat-income">
-                    <p class="stat-label">Pemasukan</p>
-                    <p class="stat-value">+Rp 4.000.000</p>
-                </div>
-                <div class="stat-card stat-expense">
-                    <p class="stat-label">Pengeluaran</p>
-                    <p class="stat-value">-Rp 405.000</p>
-                </div>
-            </div>
-        </div>
-
-        <span class="brand-copy">© 2026 Pelacak Keuangan</span>
-    </div>
-
-    <!-- ══ Form Panel ══ -->
-    <div class="reg-form-panel">
-        <div class="reg-card">
-
-            <h2 class="reg-card-title">Daftar</h2>
-            <p class="reg-card-subtitle">Silakan isi dengan data yang sesuai</p>
-
-            <?php if ($err): ?>
-            <div class="reg-error"><?= e($err) ?></div>
-            <?php endif; ?>
-
-            <form method="post">
-                <div class="reg-field">
-                    <label class="reg-label" for="reg-email">Email <span>*</span></label>
-                    <input id="reg-email" class="reg-input"
-                           type="email" name="email" maxlength="100" required
-                           placeholder="nama@email.com"
-                           value="<?= e($_POST['email'] ?? '') ?>">
-                </div>
-                <div class="reg-field">
-                    <label class="reg-label" for="reg-nama">Nama <span>*</span></label>
-                    <input id="reg-nama" class="reg-input"
-                           type="text" name="nama" maxlength="100" required
-                           placeholder="Nama lengkap"
-                           value="<?= e($_POST['nama'] ?? '') ?>">
-                </div>
-                <div class="reg-field">
-                    <label class="reg-label" for="reg-pw">Kata sandi <span>*</span></label>
-                    <input id="reg-pw" class="reg-input"
-                           type="password" name="password" minlength="8" required
-                           placeholder="Buat kata sandi (Minimal 8 Karakter)">
-                </div>
-                <button class="reg-btn" type="submit" name="daftar">Register</button>
-            </form>
-
-            <p class="reg-login-link">Sudah punya akun? <a href="Login.php">Masuk</a></p>
-
-        </div>
-    </div>
-
-</div>
-
-
-
 
     .reg-page {
         position: fixed; inset: 0; z-index: 9999;
@@ -460,6 +387,76 @@ html, body { margin: 0; padding: 0; overflow: hidden; height: 100%; }
     .reg-login-link a { color: #bf1717; font-weight: 600; text-decoration: none; }
     .reg-login-link a:hover { text-decoration: underline; }
 </style>
+
+<div class="reg-page">
+
+    <!-- ══ Brand Panel ══ -->
+    <div class="reg-brand">
+        <a class="brand-logo" href="../index.php">Money Tracker</a>
+
+        <div class="brand-content">
+            <h1 class="brand-title">Mulai Kelola keuangan Anda Sekarang</h1>
+            <p class="brand-tagline">
+                Hanya butuh waktu kurang dari 1 menit.<br>
+                Nikmati berbagai kemudahan dalam mengatur keuangan
+            </p>
+            <div class="stat-cards">
+                <div class="stat-card stat-income">
+                    <p class="stat-label">Pemasukan</p>
+                    <p class="stat-value">+Rp 4.000.000</p>
+                </div>
+                <div class="stat-card stat-expense">
+                    <p class="stat-label">Pengeluaran</p>
+                    <p class="stat-value">-Rp 405.000</p>
+                </div>
+            </div>
+        </div>
+
+        <span class="brand-copy">© 2026 Pelacak Keuangan</span>
+    </div>
+
+    <!-- ══ Form Panel ══ -->
+    <div class="reg-form-panel">
+        <div class="reg-card">
+
+            <h2 class="reg-card-title">Daftar</h2>
+            <p class="reg-card-subtitle">Silakan isi dengan data yang sesuai</p>
+
+            <?php if ($err): ?>
+            <div class="reg-error"><?= e($err) ?></div>
+            <?php endif; ?>
+
+            <form method="post">
+                <div class="reg-field">
+                    <label class="reg-label" for="reg-email">Email <span>*</span></label>
+                    <input id="reg-email" class="reg-input"
+                           type="email" name="email" maxlength="100" required
+                           placeholder="nama@email.com"
+                           value="<?= e($_POST['email'] ?? '') ?>">
+                </div>
+                <div class="reg-field">
+                    <label class="reg-label" for="reg-nama">Nama <span>*</span></label>
+                    <input id="reg-nama" class="reg-input"
+                           type="text" name="nama" maxlength="100" required
+                           placeholder="Nama lengkap"
+                           value="<?= e($_POST['nama'] ?? '') ?>">
+                </div>
+                <div class="reg-field">
+                    <label class="reg-label" for="reg-pw">Kata sandi <span>*</span></label>
+                    <input id="reg-pw" class="reg-input"
+                           type="password" name="password" minlength="8" required
+                           placeholder="Buat kata sandi (Minimal 8 Karakter)">
+                </div>
+                <button class="reg-btn" type="submit" name="daftar">Register</button>
+            </form>
+
+            <p class="reg-login-link">Sudah punya akun? <a href="Login.php">Masuk</a></p>
+
+        </div>
+    </div>
+
+</div>
+
 
 <div class="reg-page">
 
