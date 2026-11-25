@@ -121,12 +121,12 @@ UPDATE users SET role = 'admin' WHERE email = '??????@??.com'; (Paste di sql, is
 ## admin dan user terdaftar
 
 ### admin
-1. email : admin2@gmail.com pw :sandiadmin2
+1. email : admin98@gmail.com pw : mantaptoto77
 
 
 ### user
-#### polosan
-1. email : lebahganteng1234@gmail.com pw :lebahganteng1234
+1. email : jacobisukaayam@gmail.com pw : wongsayasukakok1
 
-#### isian
-1. email : pigai98@gmail.com pw : babikecap
+2. email : imutmutmok@gmail.com pw : Super_star_jumbo90
+
+3. email : bantengbermimpi@98@gmail.com pw : Kecap_mani$

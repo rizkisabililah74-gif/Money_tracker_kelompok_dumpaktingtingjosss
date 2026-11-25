@@ -248,14 +248,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
                     </div>
 
-                    <!-- Saldo Awal
+                    Saldo Awal
                     <div class="mb-4">
                         <label class="form-label-navy d-block font-heading">Saldo awal</label>
                         <div class="pill-field pill-wide">
                             <span class="rp-circle">Rp</span>
                             <input type="number" name="saldo_awal" min="0" step="0.01" placeholder="Masukkan jumlah (Default : Rp.0)" value="<?= e($_POST['saldo_awal'] ?? '') ?>">
                         </div>
-                    </div> -->
+                    </div>
 
                     <!-- Tombol Tambah Akun & Batal -->
                     <div class="d-flex flex-wrap align-items-center gap-3 mt-4 pt-2">

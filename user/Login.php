@@ -10,9 +10,9 @@ if (isset($_POST['login'])) {
 
     $login_as = ($_POST['login_as'] ?? 'user') === 'admin' ? 'admin' : 'user';
 
-// validasi sql
+    // validasi sql
 
-// pilih elemen dari tabel user
+    // pilih elemen dari tabel user
     $u = rows($connect_api, 
     "SELECT user_id, nama, password_hash, role FROM users WHERE email = ?", [$email])[0] ?? null;
 
@@ -24,11 +24,15 @@ if (isset($_POST['login'])) {
     } elseif ($login_as === 'admin' && $u['role'] !== 'admin') {
         $login_message = 'Akun ini bukan administrator';
 
+    // jika akun adalah admin tapi memilih masuk sebagai pengguna
+    } elseif ($login_as === 'user' && $u['role'] === 'admin') {
+        $login_message = 'Akun administrator harus masuk sebagai Admin';
+
     // jika login sebagai admin dan semua nilai benar, arahkan ke dashboard admin, jika login sebagai pengguna dan semua nilai benar maka arahkan ke dashboard pengguna
     } else {
         session_regenerate_id(true);
         $_SESSION = ['user_id' => $u['user_id'], 'nama' => $u['nama'], 'role' => $u['role']];
-        header('Location: ' . ($login_as === 'admin' ? '../admin/admin_dashboard.php' : '../dashboard.php'));
+        header('Location: ' . ($u['role'] === 'admin' ? '../admin/admin_dashboard.php' : '../dashboard.php'));
         exit;
     }
 }
@@ -140,10 +144,10 @@ $login_as_dipilih = ($_POST['login_as'] ?? 'user') === 'admin' ? 'admin' : 'user
             <p class="sub">Selamat datang kembali. Masuk untuk melihat kondisi keuanganmu.</p>
 
             <!-- jika daftar berhasil maka tampilkan " "  (direct dari register.php)-->
-           <?php if (isset($_GET['daftar'])): ?><div class="alert alert-success py-2 small" role="alert">Pendaftaran berhasil, silakan masuk</div><?php endif; ?>
+            <?php if (isset($_GET['daftar'])): ?><div class="alert alert-success py-2 small" role="alert">Pendaftaran berhasil, silakan masuk</div><?php endif; ?>
             <?php if ($login_message): ?><div class="alert alert-danger py-2 small" role="alert"><?= e($login_message) ?></div><?php endif; ?> 
 
-                <!-- Form -->
+            <!-- Form -->
             <form method="post" novalidate>
                 <div class="mb-4">
                     <span class="judul">Masuk sebagai :</span>
